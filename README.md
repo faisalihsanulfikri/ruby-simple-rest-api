@@ -1,24 +1,57 @@
-# README
+# Simple Rest Api With Ruby On Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+author : Faisal Ihsanul Fikri
 
-Things you may want to cover:
+### Setup
 
-* Ruby version
+- Clone this repository
+- make new database with name "mylibrary"
+- run this
+  ```sh
+  $ bundle install
+  $ rails s
+  ```
+- Rest api will ran on http://localhost:3000
+- For example http://localhost:3000/api/v1/library for get all data
 
-* System dependencies
+### Sample API
 
-* Configuration
+- Get all data
 
-* Database creation
+  ```sh
+  GET - http://localhost:3000/api/v1/library
+  ```
 
-* Database initialization
+- Get single data
 
-* How to run the test suite
+  ```sh
+  GET - http://localhost:3000/api/v1/library/1
+  ```
 
-* Services (job queues, cache servers, search engines, etc.)
+- Create data
 
-* Deployment instructions
+  ```sh
+  POST - http://localhost:3000/api/v1/library/1
+  with body
+    {
+        "title" : "title for test",
+        "description" : "description for test"
+    }
+  ```
 
-* ...
+- Update data
+
+  ```sh
+  PUT - http://localhost:3000/api/v1/library/1
+  with body
+    {
+        "title" : "title for edit",
+        "description" : "description for edit"
+    }
+  ```
+
+- Delete data
+
+  ```sh
+  DELETE - http://localhost:3000/api/v1/library/1
+  ```
